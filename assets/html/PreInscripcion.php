@@ -48,18 +48,18 @@
         <div class="col-12">
           <nav class="main-nav">
             <!-- ***** Logo Start ***** -->
-            <a href="index.html" class="logos">
+            <a href="../../index.html" class="logos">
               <h1><img src="../images/ITLF-DetalladoBlanco.png" alt=""></h1>
             </a>
             <!-- ***** Logo End ***** -->
             <!-- ***** Menu Start ***** -->
             <ul class="nav">
-              <li class="scroll-to-section"><a href="index.html#top">Inicio</a></li>
-              <li class="scroll-to-section"><a href="index.html#Especialidades">Especialidades</a></li>
-              <li class="scroll-to-section"><a href="./index.html#Nosotros">Nosotros</a></li>
+              <li class="scroll-to-section"><a href="../../index.html#top">Inicio</a></li>
+              <li class="scroll-to-section"><a href="../../index.html#Especialidades">Especialidades</a></li>
+              <li class="scroll-to-section"><a href="../../index.html#Nosotros">Nosotros</a></li>
               <li class="scroll-to-section"><a href="./documentos.html">Documentos</a></li>
-              <li class="scroll-to-section"><a href="index.html#Inscripcion" class="active">Inscripciones</a></li>
-              <li class="scroll-to-section"><a href="index.html#contact">Contacto</a></li>
+              <li class="scroll-to-section"><a href="../../index.html#Inscripcion" class="active">Inscripciones</a></li>
+              <li class="scroll-to-section"><a href="../../index.html#contact">Contacto</a></li>
             </ul>
             <a class='menu-trigger'>
               <span>Menu</span>
