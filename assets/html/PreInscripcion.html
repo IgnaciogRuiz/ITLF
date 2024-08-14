@@ -64,7 +64,6 @@
             <a class='menu-trigger'>
               <span>Menu</span>
             </a>
-
             <!-- ***** Menu End ***** -->
           </nav>
         </div>
@@ -85,7 +84,7 @@
   <!-- Form -->
   <div class="form-cont">
     <form action="../../Functions/formularioInscripcion" method="post" class="form" >
-      <?php
+      <!-- <?php
         if (isset($_GET['error'])) {
           $error = htmlspecialchars($_GET['error']);
           echo '<div id="miMensaje"><p class="error">' . $error . '</p></div>';
@@ -93,45 +92,94 @@
           $mensaje = htmlspecialchars($_GET['mensaje']);
           echo '<div id="miMensaje"><p class="mensaje">' . $mensaje . '</p></div>';
         }
-      ?>
+      ?> -->
       <h1>Formulario a completar</h1>
-        <p><strong>Importante: </strong>Si su hijo/a posee un hermano/a en el instituto la preinscripcion sera de manera presencial. </p>
-        <!-- Campo Nombre Alumno -->
-        <label for="nombreAlumno">Nombre del Alumno</label>
-        <input type="text" id="nombreAlumno" name="nombreAlumno" required>
-        <!-- Campo Apellido Alumno -->
-        <label for="apellidoAlumno">Apellido del Alumno</label>
-        <input type="text" id="apellidoAlumno" name="apellidoAlumno" required>
-        <!-- Campo DNI Alumno -->
-        <label for="dniAlumno">DNI del Alumno</label>
-        <input class="number-input" type="number" id="dniAlumno" name="dniAlumno" required>
-        <!-- Campo Nombre Tutor -->
-        <label for="tutor">Nombre Padre/Madre o Tutor</label>
-        <input type="text" id="Ntutor" name="Ntutor" required>
-        <!-- Campo Apellido Tutor -->
-        <label for="tutor">Apellido Padre/Madre o Tutor</label>
-        <input type="text" id="Atutor" name="Atutor" required>
-        <!-- Campo DNI Tutor -->
-        <label for="dniTutor">DNI del Padre/Madre o Tutor</label>
-        <input class="number-input" type="number" id="dniTutor" name="dniTutor" required>
+      <p>Complete los siguientes campos para que su hijo sea un aspirante a las inscripciones del colegio. Una vez inscripto se realizara un sorteo con los de mas aspirantes para determinar los alumnos que ingresaron. Se avisara via mail y telefono. En el caso de que su hijo/a posea un hermano en la institucion ingresa directo.</p>
+        <!-- Campo DNI Aspirante -->
+        <label for="dniAspirante">DNI del Alumno</label>
+        <input class="number-input" type="number" id="dniAspirante" name="dniAspirante" required>
+        <!-- Campo Nombre Aspirante -->
+        <label for="nombreAspirante">Nombre del Alumno</label>
+        <input type="text" id="nombreAspirante" name="nombreAspirante" required>
+        <!-- Campo Apellido Aspirante -->
+        <label for="apellidoAspirante">Apellido del Alumno</label>
+        <input type="text" id="apellidoAspirante" name="apellidoAspirante" required>
         <!-- Campo Colegio del que proviene -->
         <label for="colegio">Colegio del que proviene</label>
         <input type="text" id="colegio" name="colegio" required>
-        <!-- Campos Domicillio -->
-        <div class="domicilio-grid">
-          <!-- Campo Localidad -->
-          <label for="localidad">Localidad:</label>
-          <input type="text" id="localidad" name="localidad" required>
-          <!-- Campo CP -->
-          <label for="cp">Codigo Postal:</label>
-          <input type="number" id="cp" name="cp" required>
-          <!-- Campo Calle -->
-          <label for="calle">Calle:</label>
-          <input type="text" id="calle" name="calle" required>
-          <!-- Campo Altura -->
-          <label for="altura">Altura:</label>
-          <input type="number" id="altura" name="altura" required>         
+        
+        <!-- HERMANOS -->
+        <label for="">El Aspirante posee hermano/s o hermana/s en la institución?</label>
+        <div class="posee-hermanos">
+          <div class="radio-hermano">
+            <label for="hermanossi">sí</label>
+            <input type="radio" name="hermanos" id="hermanossi" value="si"> 
+          </div>
+          <div class="radio-hermano">
+            <label for="hermanosno">no</label>
+            <input type="radio" name="hermanos" id="hermanosno" value="no"> 
+          </div>
         </div>
+        <!-- Campo DNI Aspirante -->
+        <div class="dni-hermano">
+          <p>Si posee mas de un hermano ingrese el dni de alguno</p>
+          <label for="dniAspirante">DNI del hermano</label>
+          <input class="number-input" type="number" id="dniAspirante" name="dniAspirante" required>
+        </div>
+        <!-- END HERMANOS -->
+        
+        <!-- START TUTORES -->
+        <label>Ingrese datos de Tutores</label>
+        <div class="Tutores">
+          <div class="chk-tutores">
+              <label for="madre">Madre</label>
+              <input type="checkbox" name="madre" id="madre">
+          </div>
+          <div class="chk-tutores">
+              <label for="padre">Padre</label>
+              <input type="checkbox" name="padre" id="padre">
+          </div>
+          <div class="chk-tutores">
+              <label for="tutor">Tutor</label>
+              <input type="checkbox" name="tutor" id="tutor">
+          </div>
+        </div>
+
+        <div class="tutor-data" id="madre-data">
+          <label for="madre-name">Nombre de la Madre</label>
+          <input type="text" id="madre-name" name="madre-name">
+
+          <!-- Campos Domicillio -->
+          <div class="domicilio-grid">
+            <!-- Campo Localidad -->
+            <label for="localidad">Localidad:</label>
+            <input type="text" id="localidad" name="localidad" required>
+
+            <!-- Campo CP -->
+            <label for="cp">Codigo Postal:</label>
+            <input type="number" id="cp" name="cp" required>
+
+            <!-- Campo Calle -->
+            <label for="calle">Calle y Altura:</label>
+            <input type="text" id="calle" name="calle" required>
+          </div>
+        </div>
+
+        <div class="tutor-data" id="padre-data">
+          <label for="padre-name">Nombre del Padre</label>
+          <input type="text" id="padre-name" name="padre-name">
+        </div>
+
+        <div class="tutor-data" id="tutor-data">
+          <label for="tutor-name">Nombre del Tutor</label>
+          <input type="text" id="tutor-name" name="tutor-name">
+        </div>
+        <!-- END TUTORES -->
+
+
+
+        
+
             <div class="form-actions">
                 <button type="reset" class="reset">Limpiar Campos</button>
                 <button type="submit">Enviar</button>
@@ -160,6 +208,7 @@
   <script src="../js/custom.js"></script>
   <script src="../js/altura.js"></script>
   <script src="../js/timeout.js"></script>
+  <script src="../js/form.js"></script>
 </body>
 
 </html>
