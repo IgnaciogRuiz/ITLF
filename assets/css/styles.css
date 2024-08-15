@@ -2623,22 +2623,33 @@ Proyectos
   background-color: #5a6268;
 }
 
-
-@media (min-width: 768px) {
-    /* Estilos adicionales para los campos de domicilio */
-.form-cont .domicilio-grid {
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr 2fr; /* Divide en tres columnas iguales */
-  gap: 10px; /* Espacio entre los campos */
+@media (min-width: 1024px) {
+  .form-cont .domicilio-grid {
+    display: grid;
+    grid-template-columns: repeat(2,1fr); 
+    gap: 10px; 
+    margin: 15px auto;
+  }
+  .localidad,
+  .codigoPostal {
+    display: flex;
+    justify-items: flex-end;
+    align-items: center;
+    gap: 5px;
+  }
+  .localidad select, .localidad label {
+    margin: 0;
+  }
+  .codigoPostal input[type=number], .codigoPostal label {
+    margin: 0;
+  }
+  .codigoPostal label {
+    width: 20rem;
+    margin-left: 23%;
+  }
 }
-
-.form-cont .domicilio-grid input {
-  width: 100%; /* Ocupa todo el espacio disponible en su columna */
-}
-.form-cont .domicilio-grid label {
-  padding: 0;
-  margin: 0;
-}
+.domicilio-padre {
+  display: none;
 }
 
 
@@ -2665,21 +2676,22 @@ Proyectos
   text-align: center;
   font-size: 20px;
 }
+/* vivenjuntos radio-juntos */
 
-.posee-hermanos {
+.posee-hermanos, .vivenjuntos {
   display: flex;
   align-items: center; 
   gap: 5%;
   margin: 25px auto;
 }
 
-.radio-hermano {
+.radio-hermano, .radio-juntos {
   gap: 5px;
   display: flex;
   justify-content: flex-start;
 }
 .radio-hermano label,
-input[type=radio] {
+input[type=radio], .radio-juntos label {
   margin: 0;
   width:20px;
   height:20px;
@@ -2713,3 +2725,22 @@ input[type=radio] {
   height:20px;
 }
 
+.tutor-data {
+  background-color: rgb(226, 226, 226);
+  padding: 20px;
+  border-radius: 15px;
+  margin: 10px auto;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(226,226,226,0.75);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(226,226,226,0.75);
+  box-shadow: 0px 0px 5px 0px rgba(226,226,226,0.75);
+}
+
+.tutor-data h2 {
+  font-size: 1.5rem;
+  text-align: center;
+  color: var(--colorPrimario);
+}
+
+.pregunta-juntos {
+  display: none;
+}

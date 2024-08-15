@@ -123,8 +123,8 @@
         <!-- Campo DNI Aspirante -->
         <div class="dni-hermano">
           <p>Si posee mas de un hermano ingrese el dni de alguno</p>
-          <label for="dniAspirante">DNI del hermano</label>
-          <input class="number-input" type="number" id="dniAspirante" name="dniAspirante" required>
+          <label for="dniHermano">DNI del hermano</label>
+          <input class="number-input" type="number" id="dniHermano" name="dniHermano" required>
         </div>
         <!-- END HERMANOS -->
         
@@ -145,46 +145,179 @@
           </div>
         </div>
 
+        <!-- MADRE -->
         <div class="tutor-data" id="madre-data">
+          <h2>Informacion de la Madre</h2>
           <label for="madre-name">Nombre de la Madre</label>
           <input type="text" id="madre-name" name="madre-name">
+
+          <label for="madre-lastname">Apellido de la Madre</label>
+          <input type="text" id="madre-lastname" name="madre-lastname">
+
+          <label for="madre-profesion">Profesion de la madre</label>
+          <input type="text" id="madre-profesion" name="madre-profesion">
+
+          <label for="dni-madre">DNI de la madre</label>
+          <input class="number-input" type="number" id="dni-madre" name="dni-madre" required>
 
           <!-- Campos Domicillio -->
           <div class="domicilio-grid">
             <!-- Campo Localidad -->
-            <label for="localidad">Localidad:</label>
-            <input type="text" id="localidad" name="localidad" required>
+            <div class="localidad">
+              <label for="localidad">Localidad:</label>
+              <select name="localidad-madre" id="localidad-madre">
+                <option value="selecione" selected disabled>Seleccione una localidad</option>
+                <option value="Capilla del Monte">Capilla del Monte</option>
+                <option value="San Esteban">San Esteban</option>
+                <option value="Los Cocos">Los Cocos</option>
+                <option value="La Cumbre">La Cumbre</option>
+                <option value="Villa Giardino">Villa Giardino</option>
+                <option value="Huerta Grande">Huerta Grande</option>
+                <option value="La Falda">La Falda</option>
+                <option value="Valle Hermoso">Valle Hermoso</option>
+                <option value="Casa Grande">Casa Grande</option>
+                <option value="Molinari">Molinari</option>
+                <option value="Cosquín">Cosquín</option>
+                <option value="Santa María">Santa María</option>
+                <option value="Bialet Massé">Bialet Massé</option>
+              </select>
+            </div>
 
-            <!-- Campo CP -->
-            <label for="cp">Codigo Postal:</label>
-            <input type="number" id="cp" name="cp" required>
+            <div class="codigoPostal">
+              <!-- Campo CP -->
+              <label for="cp">Codigo Postal:</label>
+              <input type="number" id="cp" name="cp" required>
+            </div>
+          </div>
+          <!-- Campo Calle -->
+          <label for="calle">Calle y Altura:</label>
+          <input type="text" id="calle" name="calle" required>
+        </div>
+        <!-- END MADRE -->
 
+        <!-- START PADRE -->
+        <div class="tutor-data" id="padre-data">
+          <h2>Informacion del Padre</h2>
+          <label for="padre-name">Nombre del padre</label>
+          <input type="text" id="padre-name" name="padre-name">
+
+          <label for="padre-lastname">Apellido del padre</label>
+          <input type="text" id="padre-lastname" name="padre-lastname">
+
+          <label for="padre-profesion">Profesion del padre</label>
+          <input type="text" id="padre-profesion" name="padre-profesion">
+
+          <label for="dni-padre">DNI del padre</label>
+          <input class="number-input" type="number" id="dni-padre" name="dni-padre" required>
+
+          <div class="pregunta-juntos">
+            <label for="">El padre vive en el mismo domicilio que la madre?</label>
+            <div class="vivenjuntos">
+              <div class="radio-juntos">
+                <label for="sijuntos">sí</label>
+                <input type="radio" name="viven-juntos" id="sijuntos" value="si"> 
+              </div>
+              <div class="radio-juntos">
+                <label for="nojuntos">no</label>
+                <input type="radio" name="viven-juntos" id="nojuntos" value="no"> 
+              </div>
+            </div>
+          </div>
+
+            <!-- Campos Domicillio -->
+          <div class="domicilio-padre">
+            <div class="domicilio-grid">
+              <!-- Campo Localidad -->
+              <div class="localidad">
+                <label for="localidad">Localidad:</label>
+                <select name="localidad-padre" id="localidad-padre">
+                  <option value="selecione" selected disabled>Seleccione una localidad</option>
+                  <option value="Capilla del Monte">Capilla del Monte</option>
+                  <option value="San Esteban">San Esteban</option>
+                  <option value="Los Cocos">Los Cocos</option>
+                  <option value="La Cumbre">La Cumbre</option>
+                  <option value="Villa Giardino">Villa Giardino</option>
+                  <option value="Huerta Grande">Huerta Grande</option>
+                  <option value="La Falda">La Falda</option>
+                  <option value="Valle Hermoso">Valle Hermoso</option>
+                  <option value="Casa Grande">Casa Grande</option>
+                  <option value="Molinari">Molinari</option>
+                  <option value="Cosquín">Cosquín</option>
+                  <option value="Santa María">Santa María</option>
+                  <option value="Bialet Massé">Bialet Massé</option>
+                </select>
+              </div>
+
+              <div class="codigoPostal">
+                <!-- Campo CP -->
+                <label for="cp">Codigo Postal:</label>
+                <input type="number" id="cp-padre" name="cp-padre" required>
+              </div>
+            </div>
             <!-- Campo Calle -->
             <label for="calle">Calle y Altura:</label>
-            <input type="text" id="calle" name="calle" required>
+            <input type="text" id="calle-padre" name="calle-padre" required>
           </div>
         </div>
-
-        <div class="tutor-data" id="padre-data">
-          <label for="padre-name">Nombre del Padre</label>
-          <input type="text" id="padre-name" name="padre-name">
-        </div>
+        <!-- START PADRE -->
+        
 
         <div class="tutor-data" id="tutor-data">
-          <label for="tutor-name">Nombre del Tutor</label>
-          <input type="text" id="tutor-name" name="tutor-name">
+          <h2>Informacion del tutor</h2>
+          <label for="tutor-name">Nombre del tutor</label>
+          <input type="text" id="tutor-tutor" name="tutor-tutor">
+
+          <label for="tutor-lastname">Apellido del tutor</label>
+          <input type="text" id="tutor-lastname" name="tutor-lastname">
+
+          <label for="tutor-profesion">Profesion del tutor</label>
+          <input type="text" id="tutor-profesion" name="tutor-profesion">
+
+          <label for="dni-tutor">DNI del tutor</label>
+          <input class="number-input" type="number" id="dni-tutor" name="dni-tutor" required>
+
+          <!-- Campos Domicillio -->
+          <div class="domicilio-grid">
+            <!-- Campo Localidad -->
+            <div class="localidad">
+              <label for="localidad">Localidad:</label>
+              <select name="localidad-tutor" id="localidad-tutor">
+                <option value="selecione" selected disabled>Seleccione una localidad</option>
+                <option value="Capilla del Monte">Capilla del Monte</option>
+                <option value="San Esteban">San Esteban</option>
+                <option value="Los Cocos">Los Cocos</option>
+                <option value="La Cumbre">La Cumbre</option>
+                <option value="Villa Giardino">Villa Giardino</option>
+                <option value="Huerta Grande">Huerta Grande</option>
+                <option value="La Falda">La Falda</option>
+                <option value="Valle Hermoso">Valle Hermoso</option>
+                <option value="Casa Grande">Casa Grande</option>
+                <option value="Molinari">Molinari</option>
+                <option value="Cosquín">Cosquín</option>
+                <option value="Santa María">Santa María</option>
+                <option value="Bialet Massé">Bialet Massé</option>
+              </select>
+            </div>
+
+            <div class="codigoPostal">
+              <!-- Campo CP -->
+              <label for="cp">Codigo Postal:</label>
+              <input type="number" id="cp-tutor" name="cp-tutor" required>
+            </div>
+          </div>
+          <!-- Campo Calle -->
+          <label for="calle">Calle y Altura:</label>
+          <input type="text" id="calle-tutor" name="calle-tutor" required>
         </div>
         <!-- END TUTORES -->
 
 
 
-        
-
-            <div class="form-actions">
-                <button type="reset" class="reset">Limpiar Campos</button>
-                <button type="submit">Enviar</button>
-            </div>
-</div>
+    <div class="form-actions">
+        <button type="reset" class="reset">Limpiar Campos</button>
+        <button type="submit">Enviar</button>
+    </div>
+  </div>
 <!-- Form End-->
 
   <!-- Footer -->
