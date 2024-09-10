@@ -2623,6 +2623,7 @@ Proyectos
   background-color: #5a6268;
 }
 
+
 @media (min-width: 1024px) {
   .form-cont .domicilio-grid {
     display: grid;
@@ -2637,15 +2638,25 @@ Proyectos
     align-items: center;
     gap: 5px;
   }
-  .localidad select, .localidad label {
+  .altura,
+  .calle {
+    display: flex;
+    justify-items: flex-end;
+    align-items: center;
+    gap: 5px;
+  }
+  .localidad select, .localidad label, .altura label,
+  .calle label {
     margin: 0;
   }
-  .codigoPostal input[type=number], .codigoPostal label {
+  .codigoPostal input[type=number], .codigoPostal label, .altura input[type=number], .altura label, .calle input[type=text], .calle label  {
     margin: 0;
   }
-  .codigoPostal label {
+  .codigoPostal label, .altura label {
     width: 20rem;
-    margin-left: 23%;
+  }
+  .altura label, .codigoPostal label  {
+    text-align: right;
   }
 }
 .domicilio-padre {

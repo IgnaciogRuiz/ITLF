@@ -81,7 +81,7 @@
 
   <!-- Form -->
   <div class="form-cont">
-    <form action="../../Functions/cv" method="post" enctype="multipart/form-data" class="form" >
+    <form action="../../Functions/EnviarCurriculum.php" method="post" enctype="multipart/form-data" class="form" >
       <?php
         if (isset($_GET['error'])) {
           $error = htmlspecialchars($_GET['error']);
@@ -100,11 +100,17 @@
         <!-- Campo DNI -->  
         <label for="dni">DNI</label>
         <input class="number-input" type="number" id="dni" name="dni" required>
+        <!-- Campo telefono -->
+        <label for="telefono">Telefono</label>
+        <input type="number-input" id="telefono" name="telefono" required>
+        <!-- Campo telefono -->
+        <label for="mail">Mail</label>
+        <input type="text" id="mail" name="mail" required>
         <!-- Campo nacimiento -->
         <label for="nacimiento">Fecha de nacimiento</label>
         <input type="date" id="nacimiento" name="nacimiento" required>
         <!-- Campo Profesion -->
-        <label for="profesion">Puesto al que qiuere aplicar</label>
+        <label for="profesion">Puesto al que quiere aplicar</label>
         <input type="text" id="profesion" name="profesion" required>
         <!-- Campo Trayecto -->
         <label for="tdocente">Describe tu trayecto docente</label>
@@ -112,25 +118,48 @@
         <!-- Campo CV -->
         <label for="cv">Curriculum</label>
         <input type="file" id="cv" name="cv" accept=".pdf, .doc, .docx, .txt, .rtf, .odt, .jpg, .jpeg, .png" required>
-        <!-- Campos Domicilio -->
+        <!-- Campos Domicillio -->
         <div class="domicilio-grid">
-          <!-- Campo localidad -->
-          <label for="localidad">Localidad:</label>
-          <input type="text" id="localidad" name="localidad" required>
-          <!-- Campo CP -->
-          <label for="cp">Codigo Postal:</label>
-          <input type="number" id="cp" name="cp" required>
-          <!-- Campo Calle -->
-          <label for="calle">Calle:</label>
-          <input type="text" id="calle" name="calle" required>
-          <!-- Campo Altura -->
-          <label for="altura">Altura:</label>
-          <input type="number" id="altura" name="altura">      
-        </div>
-            <div class="form-actions">
-                <button type="reset" class="reset">Limpiar Campos</button>
-                <button type="submit">Enviar</button>
+            <!-- Campo Localidad -->
+            <div class="localidad">
+                <label for="localidad">Localidad:</label>
+                <select name="local" id="localidad">
+                    <option value="seleccione" selected disabled>Seleccione una localidad</option>
+                    <option value="Capilla del Monte">Capilla del Monte</option>
+                    <option value="San Esteban">San Esteban</option>
+                    <option value="Los Cocos">Los Cocos</option>
+                    <option value="La Cumbre">La Cumbre</option>
+                    <option value="Villa Giardino">Villa Giardino</option>
+                    <option value="Huerta Grande">Huerta Grande</option>
+                    <option value="La Falda">La Falda</option>
+                    <option value="Valle Hermoso">Valle Hermoso</option>
+                    <option value="Casa Grande">Casa Grande</option>
+                    <option value="Molinari">Molinari</option>
+                    <option value="Cosquín">Cosquín</option>
+                    <option value="Santa María">Santa María</option>
+                    <option value="Bialet Massé">Bialet Massé</option>
+                </select>
             </div>
+
+            <div class="codigoPostal">
+              <!-- Campo CP -->
+              <label for="cp">Codigo Postal:</label>
+              <input type="number" id="cp" name="cp" required>
+            </div>
+            <div class="calle">
+              <!-- Campo Calle -->
+              <label for="calle">Calle:</label>
+              <input type="text" id="calle" name="calle" required>
+            </div>
+            <div class="altura">
+              <label for="altura">Altura:</label>
+              <input type="number" id="altura" name="altura" required>
+            </div>
+        </div>
+      <div class="form-actions">
+        <button type="reset" class="reset">Limpiar Campos</button>
+        <button type="submit">Enviar</button>
+      </div>
 </div>
 <!-- Form End -->
 

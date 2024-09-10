@@ -1,3 +1,11 @@
+<?php
+session_start();
+if (!isset($_SESSION["username"])) {
+  header("Location: login.html");
+  exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -41,7 +49,7 @@
                         <span class="material-symbols-sharp">description</span>
                         <h3>Curriculums</h3>
                     </a>
-                    <a href="./Login.html">
+                    <a href="../Functions/logout.php">
                         <span class="material-symbols-sharp">logout</span>
                         <h3>logout</h3>
                     </a>
@@ -127,7 +135,6 @@
         </div>
     </div>
     <script src="./js/script.js"></script>
-    <script src="./js/logout.js"></script>
 </body>
 
 </html>

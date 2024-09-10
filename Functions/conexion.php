@@ -1,6 +1,4 @@
 <?php
-
-// Datos de conexión a la base de datos
 $servername = "localhost"; // Servidor
 $username = "root";    // Nombre de usuario de la base de datos
 $password = ""; // Contraseña del usuario
