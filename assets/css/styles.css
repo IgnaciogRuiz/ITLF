@@ -1733,6 +1733,7 @@ body {
   footer {
     margin-top: 30px;
   }
+  
 }
 
 @media (max-width: 1200px) {
@@ -1925,6 +1926,11 @@ CONOCEMAS HTML
   width: 100%;
   flex-shrink: 0;
   margin-top: -250px;
+}
+@media (max-width:960px) {
+  .carousel-container2 .carousel-slide img {
+    margin-top: 0;
+  }
 }
 
 @keyframes slide {
