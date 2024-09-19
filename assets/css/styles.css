@@ -684,7 +684,7 @@ Banner Style
 
 
 .main-banner .item h2 {
-  font-size: 48px;
+  font-size: 38px;
   font-weight: 700;
   color: #fff;
   line-height: 70px;
@@ -695,7 +695,19 @@ Banner Style
 .main-banner .item p {
   color: #fff;
   width: 65%;
-  font-size: 13px;
+  font-size: 12px;
+  line-height: 23px;
+}
+@media (min-width:720px) {
+  .main-banner .item p {
+    color: #fff;
+    width: 65%;
+    font-size: 15px;
+    line-height: 27px;
+  }
+  .main-banner .item h2 {
+    font-size: 40px;
+  }
 }
 
 .main-banner .header-text { /* alinear el boton a la izquierda */
@@ -703,11 +715,7 @@ Banner Style
   position: relative;
   height: 100%;
 }
-@media (max-with: 500px) {
-  .main-banner .item p {
-    line-height: 22px;
-  }
-}
+
 
 
 .main-banner .item .buttons .main-button {
