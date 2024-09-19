@@ -695,12 +695,20 @@ Banner Style
 .main-banner .item p {
   color: #fff;
   width: 65%;
+  font-size: 13px;
 }
+
 .main-banner .header-text { /* alinear el boton a la izquierda */
   text-align: left;
   position: relative;
   height: 100%;
 }
+@media (max-with: 500px) {
+  .main-banner .item p {
+    line-height: 22px;
+  }
+}
+
 
 .main-banner .item .buttons .main-button {
   margin-right: 30px;
@@ -1388,6 +1396,11 @@ Contact Style
   position: relative;
   z-index: 4;
 }
+@media (max-width: 550px) {
+  .contact-us .contact-us-content  iframe {
+    height: 400px;
+  }
+}
 
 .contact-us .contact-us-content::before {
   background: url(../images/contact-dec-01.png);
@@ -1561,8 +1574,8 @@ body {
     width: 100%;
   }
   .main-banner .item h2 {
-    font-size: 36px;
-    line-height: 50px;
+    font-size: 30px;
+    line-height: 40px;
   }
   .main-banner .item .buttons {
     display: inline-block;
@@ -1778,6 +1791,9 @@ DOCUMENTOS HTML
   margin: 0 auto;
   box-shadow: 0px 0px 23px 0px rgba(112,112,112,0.45);
 }
+.documents .item:last-child {
+  grid-column: 1/3;
+}
 
 .documents .item ul {
   padding: 0;
@@ -1887,10 +1903,7 @@ CONOCEMAS HTML
 
 .carousel-container2 {
   width: 100%;
-  max-width: 1200px;
-  margin: 50px auto;
   overflow: hidden;
-  border-radius: 0;
   background-color: #FFFFFF;
   position: relative;
   z-index: 1;
@@ -1898,8 +1911,7 @@ CONOCEMAS HTML
 }
 @media (min-width: 1024px) {
   .carousel-container2 {
-  height: 700px;
-  border-radius: 15px;
+  height: 500px;
   }
 }
 
@@ -1909,9 +1921,10 @@ CONOCEMAS HTML
   animation: slide 16s infinite;
 }
 
-.carousel-slide img {
+.carousel-container2 .carousel-slide img {
   width: 100%;
   flex-shrink: 0;
+  margin-top: -250px;
 }
 
 @keyframes slide {
@@ -2023,103 +2036,14 @@ padding: 10px;
 	} 
 }
 
-/* Reviews */
-.review {
-  max-width: 320px;
-  padding: 1rem;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 20px 20px 30px rgba(0, 0, 0, .05);
-  align-self: center;
-  justify-self: center;
-}
-
-.review .title {
-  font-weight: 600;
-  color: rgb(31, 41, 55);
-}
-
-.review .description {
-  margin-top: 1rem;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  color: rgb(75, 85, 99);
-}
-
-.review .description a {
-  --tw-text-opacity: 1;
-  color: rgb(59, 130, 246);
-}
-
-.review .description a:hover {
-  -webkit-text-decoration-line: underline;
-  text-decoration-line: underline;
-}
-
-.review .actions {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 1rem;
-  -moz-column-gap: 1rem;
-  column-gap: 1rem;
-  flex-shrink: 0;
-}
-
-.review .link {
-  font-size: 0.75rem;
-  line-height: 1rem;
-  color: rgb(31, 41, 55);
-  -webkit-text-decoration-line: underline;
-  text-decoration-line: underline;
-  transition: all .3s cubic-bezier(0.4, 0, 0.2, 1);
-  border: none;
-  background-color: transparent;
-}
-
-.review .link:hover {
-  color: rgb(156, 163, 175);
-}
-
-.review .link:focus {
-  outline: 2px solid transparent;
-  outline-offset: 2px;
-}
-
-.review .accept {
-  font-size: 0.75rem;
-  line-height: 1rem;
-  background-color: rgb(17, 24, 39);
-  font-weight: 500;
-  border-radius: 0.5rem;
-  color: #fff;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-top: 0.625rem;
-  padding-bottom: 0.625rem;
-  border: none;
-  transition: all .15s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.review .accept:hover {
-  background-color: rgb(55, 65, 81);
-}
-
-.review .accept:focus {
-  outline: 2px solid transparent;
-  outline-offset: 2px;
-}
 
 .galeria-section {
   text-align: center;
   margin-top: 10rem;
+  margin-bottom: 5rem;
   
 }
-@media (min-width: 768px) {
-    .galeria-section {
-      margin: 0 7rem;
-    }
-}
+
 .galeria-section h2{
   color: var(--colorPrimario);
   font-size: 60px;
@@ -2496,6 +2420,7 @@ Proyectos
   grid-template-columns: 1fr;
   grid-template-rows: repeat(3, 1fr);
   gap: 3rem;
+  margin-top: 2rem;
 }
 
 /* Estilos responsivos para el contenedor de proyectos en pantallas grandes */
