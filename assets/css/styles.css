@@ -1886,6 +1886,10 @@ DOCUMENTOS HTML
     font-size: 14px;
     border-radius: 20px 0px 0px 20px;
   }
+  .documents .item:last-child {
+    grid-column: 1/2;
+  }
+  
 }
 
 /* 
