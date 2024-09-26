@@ -5,8 +5,8 @@ require '../library/PHPMailer/SMTP.php';
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-//header("Location: ../assets/html/curriculum.php?error=Método de solicitud no permitido");
-//header("Location: ../assets/html/curriculum.php?mensaje=Datos y archivo subidos correctamente");
+
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     // Recibir y validar los datos del formulario
@@ -53,22 +53,25 @@ try {
     $mail->Subject = 'Curriculum ' . $apellido . ' ' . $nombre;// Asunto del correo
     $mail->Body  = "
     <html>
-    <body>
-        <h1>Datos del Formulario</h1>
-        <p><strong>Nombre:</strong> $nombre</p>
-        <p><strong>Apellido:</strong> $apellido</p>
-        <p><strong>DNI:</strong> $dni</p>
-        <p><strong>Teléfono:</strong> $telefono</p>
-        <p><strong>Correo Electrónico:</strong> $Email</p>
-        <p><strong>Fecha de Nacimiento:</strong> $nacimiento</p>
-        <p><strong>Puesto al que quiere aplicar:</strong> $profesion</p>
-        <p><strong>Trayecto Docente:</strong> $tdocente</p>
-        <p><strong>Localidad:</strong> $local</p>
-        <p><strong>Código Postal:</strong> $cp</p>
-        <p><strong>Altura:</strong> $altura</p>
-        <p><strong>Calle:</strong> $calle</p>
-    </body>
+        <body style='font-family: Arial, sans-serif; margin: 0; padding: 20px; background-color: #f4f4f9; color: #333;'>
+            <div style='max-width: 600px; margin: 0 auto; background-color: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);'>
+                <h1 style='color: #4CAF50; font-size: 24px; text-align: center;'>Datos del Formulario ITLF</h1>
+                <p><strong>Nombre:</strong> $nombre</p>
+                <p><strong>Apellido:</strong> $apellido</p>
+                <p><strong>DNI:</strong> $dni</p>
+                <p><strong>Teléfono:</strong> $telefono</p>
+                <p><strong>Correo Electrónico:</strong> <a href='mailto:$Email' style='color: #4CAF50; text-decoration: none;'>$Email</a></p>
+                <p><strong>Fecha de Nacimiento:</strong> $nacimiento</p>
+                <p><strong>Puesto al que quiere aplicar:</strong> $profesion</p>
+                <p><strong>Trayecto Docente:</strong> $tdocente</p>
+                <p><strong>Localidad:</strong> $local</p>
+                <p><strong>Código Postal:</strong> $cp</p>
+                <p><strong>Calle:</strong> $calle</p>
+                <p><strong>Altura:</strong> $altura</p>
+            </div>
+        </body>
     </html>"; 
+
 
     $mail->AltBody = "Datos del Formulario\n\n".
     "Nombre: $nombre\n".
@@ -81,17 +84,19 @@ try {
     "Trayecto Docente: $tdocente\n".
     "Localidad: $local\n".
     "Código Postal: $cp\n".
-    "Altura: $altura\n".
-    "Calle: $calle\n"; 
+    "Calle: $calle\n".
+    "Altura: $altura\n"; 
 
     //Attachments
     $mail->addAttachment($tmpFilePath, $fileName);   
 
     // Enviar el correo
     $mail->send();
-    echo 'El correo ha sido enviado correctamente';
+    //echo 'El correo ha sido enviado correctamente';
+    header("Location: ../assets/html/curriculum.php?mensaje=Curriculum subido correctamente");
 } catch (Exception $e) {
-    echo "El mensaje no se pudo enviar. Error: {$mail->ErrorInfo}";
+    //echo "El mensaje no se pudo enviar. Error: {$mail->ErrorInfo}";
+    header("Location: ../assets/html/curriculum.php?error=Error al subir el archivo");
 }
 
 
