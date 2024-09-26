@@ -2282,6 +2282,39 @@ Contenedor de Información de Especialidades
   }
 }
 
+.info-esp-img {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.info-esp-img h6 {
+  color: var(--colorPrimario);
+  text-align: center;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+.info-esp-img .proyecto img{
+  border-radius: 15px;
+  height: 350px;
+  object-fit: cover;
+  -webkit-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.75);
+}
+.info-esp-img .proyecto video{
+  border-radius: 15px;
+  height: 350px;
+  object-fit: cover;
+}
+
+@media (max-width: 1360px) {
+  .info-esp-img {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* 
 ---------------------------------------------
 Imágenes
