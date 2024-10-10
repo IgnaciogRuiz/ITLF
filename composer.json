@@ -1,0 +1,16 @@
+{
+    "name": "ignar/itlf",
+    "description": "This is my first project. ITLF (Instituto Técnico La Falda) is a website for my school, designed and created by me using HTML, CSS, JavaScript, PHP, and various libraries.",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "IgnaciogRuiz",
+            "email": "ignacioguillermoruiz@gmail.com"
+        }
+    ],
+    "minimum-stability": "alpha",
+    "require": {
+        "phpmailer/phpmailer": "^6.9"
+    }
+}
