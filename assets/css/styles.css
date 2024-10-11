@@ -1069,6 +1069,9 @@ Instertribus Style
   padding: 80px;
   height: 400px;
 }
+#tribus {
+  background-image: url(../images/tribus.jpg);
+}
 #tribu-azul {
 background-image: url(../images/Azul.jpg);
 }
@@ -1657,7 +1660,7 @@ body {
     margin-bottom: 140px;
   }
   .testimonials {
-    margin-top: -50px;
+    margin-top: -30px;
     padding: 0px;
   }
   .testimonials .section-heading {
@@ -2275,16 +2278,17 @@ Contenedor de Información de Especialidades
 }
 
 /* Estilos responsivos para el contenedor de información de la especialidad en pantallas grandes */
-@media (min-width: 769px) {
+@media (min-width: 1024px) {
   .container-info-esp {
     margin: 5rem 15rem;
   }
 }
 
+
 .info-esp-img {
   display: grid;
-  grid-template-columns: repeat(3,1fr);
-  gap: 2rem;
+  grid-template-rows: repeat(3,1fr);
+  gap: 4rem;
   margin-top: 3rem;
 }
 
@@ -2296,23 +2300,21 @@ Contenedor de Información de Especialidades
 }
 .info-esp-img .proyecto img{
   border-radius: 15px;
-  height: 350px;
+  height: auto;
   object-fit: cover;
   -webkit-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.75);
   -moz-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.75);
   box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.75);
 }
-.info-esp-img .proyecto video{
-  border-radius: 15px;
-  height: 350px;
-  object-fit: cover;
+#hcIMG {
+  height: 300px;
 }
-
-@media (max-width: 1360px) {
-  .info-esp-img {
-    grid-template-columns: 1fr;
+@media (min-width: 1024px) {
+  #hcIMG {
+    height: 500px;
   }
 }
+
 
 /* 
 ---------------------------------------------
