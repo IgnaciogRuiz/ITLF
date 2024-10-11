@@ -1,3 +1,8 @@
+/* 
+---------------------------------------------
+Variables
+--------------------------------------------- 
+*/
 :root {
   --colorPrimario: #24417B;
   --Secundario: #;
@@ -299,34 +304,6 @@ Header Style
 .header-area .main-nav {
   background: transparent;
   display: flex
-}
-
-.header-area .main-nav #search {
-  position: relative;
-}
-
-.header-area .main-nav #search input {
-  background-color: rgba(255, 255, 255, 0.10);
-  height: 44px;
-  width: 250px;
-  border-radius: 23px;
-  border: none;
-  color: #fff;
-  font-size: 14px;
-  font-weight: 300;
-  padding: 0px 20px 0px;
-}
-
-.header-area .main-nav #search input::placeholder {
-  color: rgba(250, 250, 250, 0.75);
-}
-
-.header-area .main-nav #search i {
-  position: absolute;
-  color: #fff;
-  right: 20px;
-  top: 15px;
-  font-size: 16px;
 }
 
 .header-area .main-nav ul.nav {
@@ -1203,6 +1180,10 @@ Events Style
 .events .section-heading {
   margin-bottom: 100px;
 }
+.events h2 {
+  color: var(--colorPrimario);
+  font-size: 3rem;
+}
 
 .events .item {
   background-color: #f1f0fe;
@@ -1225,49 +1206,23 @@ Events Style
   height: 220px;
 }
 
-.events .item ul li {
-  display: inline-block;
-  width: 17.5%;
-  vertical-align: middle;
-}
-
-.events .item ul li:first-child {
-  width: 35%;
-}
-
-.events .item ul li:nth-of-type(2) {
-  width: 28%;
-}
-
-.events .item ul li span.category {
-  font-size: 14px;
-  text-transform: uppercase;
-  color: var(--colorPrimario);
-  background-color: #fff;
-  padding: 8px 20px;
-  border-radius: 25px;
-  font-weight: 500;
-  display: inline-block;
-  margin-bottom: 20px;
-}
-
-.events .item ul li h4 {
+.events .item  h4 {
   font-size: 22px;
   font-weight: 600;
 }
 
-.events .item ul li span {
+.events .item span {
   display: inline-block;
   font-size: 14px;
   color: #4a4a4a;
   margin-bottom: 10px;
 }
 
-.events .item ul li h6 {
+.events .item  h6 {
   font-size: 16px;
   color: var(--colorPrimario);
   font-weight: 600;
-}
+} 
 
 .events .item a {
   position: absolute;
@@ -1377,6 +1332,11 @@ Contact Style
 .contact-us .special-offer h4 em {
   font-style: normal;
   color: var(--colorPrimario);
+}
+.contact-us h2 {
+  margin-bottom: 50px;
+  font-size: 3rem;
+  color: var(--negro);
 }
 
 .contact-us .special-offer a {
