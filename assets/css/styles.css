@@ -1452,6 +1452,13 @@ Contact Style
 
 #contact-form button:hover {
   opacity: 0.8;
+} 
+
+.contact-mail {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 
@@ -1699,6 +1706,11 @@ body {
   }
   .contact-us .contact-us-content {
     padding: 30px;
+  }
+  .contact-mail {
+    display: block;
+    text-align: center;
+    margin: 15px;
   }
   footer {
     margin-top: 30px;
