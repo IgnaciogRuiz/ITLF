@@ -29,7 +29,7 @@ function descargarArchivo() {
 
     var enlace = document.getElementById('horarios-a');
     enlace.setAttribute('href', archivoURL);
-    enlace.setAttribute('download', "Horario-" + seleccion + ".pdf");
+    enlace.setAttribute("Horario-" + seleccion + ".pdf");
 }
 
 document.getElementById("seleccionarArchivo").addEventListener("change", function() {

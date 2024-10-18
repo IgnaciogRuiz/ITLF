@@ -158,7 +158,7 @@
         </div>
       <div class="form-actions">
         <button type="reset" class="reset">Limpiar Campos</button>
-        <button type="submit">Enviar</button>
+        <button type="submit" disabled>Enviar</button><!-- Boton deshabilitado -->
       </div>
 </div>
 <!-- Form End -->
