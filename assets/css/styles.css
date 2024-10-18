@@ -686,13 +686,11 @@ Banner Style
   }
 }
 
-.main-banner .header-text { /* alinear el boton a la izquierda */
+.main-banner .header-text { 
   text-align: left;
   position: relative;
   height: 100%;
 }
-
-
 
 .main-banner .item .buttons .main-button {
   margin-right: 30px;
@@ -915,10 +913,6 @@ h2.accordion-header button {
   margin-top: 50px;
 }
 
-
-
-
-
 /* 
 ---------------------------------------------
 Facts Style
@@ -982,7 +976,6 @@ Facts Style
 }
 
 
-
 /* 
 ---------------------------------------------
 Instertribus Style
@@ -1031,7 +1024,6 @@ Instertribus Style
   color: var(--blanco);
 }
 }
-
 
 .testimonials .item {
   background-repeat: no-repeat;
