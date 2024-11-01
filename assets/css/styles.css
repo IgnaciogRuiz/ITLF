@@ -2536,6 +2536,9 @@ Proyectos
   border: 0px solid #ccc;
   border-radius: 0px;
 }
+.obligatorio {
+  color: red;
+}
 
 .form-actions {
   display: flex;

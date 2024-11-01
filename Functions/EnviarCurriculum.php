@@ -1,52 +1,34 @@
 <?php 
-require '../vendor/PHPMailer/Exception.php';
-require '../vendor/PHPMailer/PHPMailer.php';
-require '../vendor/PHPMailer/SMTP.php';
+require '../../vendor/autoload.php';
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
+use Dotenv\Dotenv;
+// $dotenv = Dotenv::createImmutable('C:/wamp64/www/ITLF');
+// $dotenv->load();
 
-
-
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-
-    // Recibir y validar los datos del formulario
-    $nombre = $_POST['nombre'];
-    $apellido = $_POST['apellido'];
-    $dni = intval($_POST['dni']);
-    $telefono = $_POST['telefono'];
-    $Email = strval($_POST['mail']);
-    $nacimiento = $_POST['nacimiento'];
-    $profesion = $_POST['profesion'];
-    $tdocente = $_POST['tdocente'];
-    $local = $_POST['local'] ?? '';
-    $cp = $_POST['cp'];
-    $altura = $_POST['altura'];
-    $calle = $_POST['calle'];
-    // Ruta temporal del archivo subido
-    $tmpFilePath = $_FILES['cv']['tmp_name'];
-    // Nombre del archivo subido
-    $fileName = $_FILES['cv']['name'];
-    
-
-//echo $nombre . '<br>' . $apellido . '<br>' . $dni . '<br>' . $telefono . '<br>' . $mail . '<br>' . $nacimiento . '<br>' . $profesion . '<br>' . $tdocente . '<br>' . $local . '<br>' . $cp . '<br>' . $altura . '<br>' . $calle;
+//echo $nombre . '<br>' . $apellido . '<br>' . $dni . '<br>' . $telefono . '<br>' . $Email . '<br>' . $nacimiento . '<br>' . $profesion . '<br>' . $tdocente . '<br>' . $local . '<br>' . $cp . '<br>' . $altura . '<br>' . $calle;
 // contraseña del mail: testmail123   
 //contraseña de aplicacion: mrre yxto lqlr jmaq
 // Crear una instancia de PHPMailer
 $mail = new PHPMailer(true);
 
 try {
+    // $mail->SMTPDebug = 2;  // Cambia el nivel a 3 para más detalles
+    // $mail->Debugoutput = 'html';
     //Configuración del servidor SMTP
     $mail->isSMTP(); // Usar SMTP
     $mail->Host       = 'smtp.gmail.com';// Servidor SMTP
     $mail->SMTPAuth   = true; // Habilitar autenticación SMTP
-    $mail->Username   = getenv('SMTP_USERNAME');
-    $mail->Password   = getenv('SMTP_PASSWORD');
+    $mail->Username   = 'gruizignacio3@gmail.com';
+    $mail->Password   = 'rwtn ocmz pavc deyn';
+    //$mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS; // Cifrado TLS
     $mail->Port       = 465;// Puerto SMTP
 
     // Configuración del remitente y destinatarios
     $mail->setFrom('gruizignacio3@gmail.com', 'Ruiz Ignacio');  // Remitente
     $mail->addAddress('est.ruiz.ignacio@latecnicalf.com.ar');   // Añadir destinatario
+    // mail de RRHH: rh@latecnicalf.com.ar
 
     // Configuración del correo
     $mail->isHTML(true); // Definir el correo como HTML
@@ -86,22 +68,15 @@ try {
     "Código Postal: $cp\n".
     "Calle: $calle\n".
     "Altura: $altura\n"; 
-
     //Attachments
     $mail->addAttachment($tmpFilePath, $fileName);   
-
     // Enviar el correo
     $mail->send();
     //echo 'El correo ha sido enviado correctamente';
-    header("Location: ../assets/html/curriculum.php?mensaje=Curriculum subido correctamente");
+    header("Location: ../html/curriculum.php?mensaje=Curriculum subido correctamente");
 } catch (Exception $e) {
     //echo "El mensaje no se pudo enviar. Error: {$mail->ErrorInfo}";
-    header("Location: ../assets/html/curriculum.php?error=Error al subir el archivo");
+    // header("Location: ../html/curriculum.php?error=Error al subir el archivo");
 }
 
-
-} else {
-    header("Location: ../assets/html/curriculum.php?error=Método de solicitud no permitido");
-    exit();
-}
 ?>
