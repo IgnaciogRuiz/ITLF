@@ -12,7 +12,7 @@
 
   <!-- Bootstrap core CSS -->
   <link href="../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="icon" type="image/png" href="../images/Icono_logo.png" />
+  <link rel="icon" type="image/png" href="../images/ITLF-Blanco.ico" />
 
   <!-- CSS Files -->
   <link rel="stylesheet" href="../css/fontawesome.css">
