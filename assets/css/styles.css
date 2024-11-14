@@ -498,7 +498,7 @@ Header Style
 
 }
 
-@media (max-width: 768px) {
+@media (max-width: 815px) {
   .background-header .main-nav .nav,
   .header-area .main-nav .nav {
     background-color: #f1f0fe;
