@@ -686,13 +686,11 @@ Banner Style
   }
 }
 
-.main-banner .header-text { /* alinear el boton a la izquierda */
+.main-banner .header-text { 
   text-align: left;
   position: relative;
   height: 100%;
 }
-
-
 
 .main-banner .item .buttons .main-button {
   margin-right: 30px;
@@ -850,13 +848,13 @@ About Style
   margin-bottom: -40px;
   background-color: var(--colorPrimario);
   border-radius: 40px;
-  padding: 80px 50px 50px 50px;
+  padding: 90px 60px 60px 60px;
 }
 
 .accordion-item {
   background-color: #fff;
   border-radius: 40px !important;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
   border: none;
 }
 
@@ -914,10 +912,6 @@ h2.accordion-header button {
 .about-us .section-heading .main-button {
   margin-top: 50px;
 }
-
-
-
-
 
 /* 
 ---------------------------------------------
@@ -982,7 +976,6 @@ Facts Style
 }
 
 
-
 /* 
 ---------------------------------------------
 Instertribus Style
@@ -1031,7 +1024,6 @@ Instertribus Style
   color: var(--blanco);
 }
 }
-
 
 .testimonials .item {
   background-repeat: no-repeat;
@@ -1452,6 +1444,13 @@ Contact Style
 
 #contact-form button:hover {
   opacity: 0.8;
+} 
+
+.contact-mail {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 
@@ -1699,6 +1698,11 @@ body {
   }
   .contact-us .contact-us-content {
     padding: 30px;
+  }
+  .contact-mail {
+    display: block;
+    text-align: center;
+    margin: 15px;
   }
   footer {
     margin-top: 30px;
@@ -2531,6 +2535,9 @@ Proyectos
   margin-bottom: 1rem;
   border: 0px solid #ccc;
   border-radius: 0px;
+}
+.obligatorio {
+  color: red;
 }
 
 .form-actions {
